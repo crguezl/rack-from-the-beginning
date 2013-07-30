@@ -2,16 +2,13 @@
 require 'rack'
 require 'rack/server'
 
-class HelloWorld
-  def response
-    [200, {}, '<h1>Hello World</h1>']
-  end
-end
-
 class HelloWorldApp
   def self.call(env)
-    HelloWorld.new.response
+    out = env.sort.reduce([]) do |x, y| 
+      x += [ "  #{y[0]} => #{y[1]}\n" ] 
+    end
+    [ "200", { 'Content-Type' => 'text/plain' }, out ]
   end
 end
 
-Rack::Server.start :app => HelloWorldApp
+Rack::Server.start :app => HelloWorldApp, :server => 'thin'
