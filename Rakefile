@@ -5,5 +5,5 @@ end
 
 desc "run the client"
 task :client do
-  sh %q{curl -v 'http://localhost:8080?world'}
+  sh %q{curl -v 'http://localhost:8080?message="hello%20world"'}
 end
