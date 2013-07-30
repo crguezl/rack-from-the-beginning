@@ -8,6 +8,8 @@ class HelloWorldApp
   end
 
   def self.call(env)
+    # Rack::Request is simply a proxy for the env hash. 
+    # The underlying env hash is modified 
     request = Rack::Request.new env
 
     puts "DEFAULT_PORTS = #{Rack::Request::DEFAULT_PORTS}"
