@@ -4,7 +4,7 @@ require 'rack/server'
 
 class HelloWorld
   def response
-    [200, {}, 'Hello World']
+    [200, {}, '<h1>Hello World</h1>']
   end
 end
 
