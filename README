@@ -6,3 +6,4 @@ branches:
   env: section env of the post
   abstractions: section abstractions
   middleware: section middleware
+  composing: section Composing Rack Apps from Middleware
