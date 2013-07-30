@@ -5,3 +5,4 @@ branches:
   dead_simple: section Dead Simple Rack Applications
   env: section env of the post
   abstractions: section abstractions
+  middleware: section middleware
